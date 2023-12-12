@@ -31,7 +31,7 @@ function App() {
   const copyPassword = () => {
     passwordRef.current.select()
     document.execCommand("copy")
-    alert("Password copied to clipboard")
+    
   }
   useEffect(() => {
     passwordGenerator()
