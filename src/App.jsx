@@ -29,8 +29,9 @@ function App() {
   }, [length, numberAllowed, characterAllowed, setPassword]);
 
   const copyPassword = () => {
-    passwordRef.current.select()
-    document.execCommand("copy")
+    passwordRef.current?.select()
+    window.navigator.clipboard.writeText(passwordRef.current?.value)
+    
     
   }
   useEffect(() => {
